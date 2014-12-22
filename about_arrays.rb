@@ -21,7 +21,8 @@ class AboutArrays < Neo::Koan
     assert_equal [1, 2, 333], array
   end
 
-    # Elements of an array can be updated by their index number. << pushes a new element onto the end of the array.
+    # Elements of an array can be updated by their index number. << pushes a new
+    # element onto the end of the array.
 
   def test_accessing_array_elements
     array = [:peanut, :butter, :and, :jelly]
@@ -46,7 +47,10 @@ class AboutArrays < Neo::Koan
     assert_equal nil, array[5,0]
   end
   
-  # Slicing does not identify the element, but places it between index numbers to define a span. 0 :peanut 1 :butter 2 :and 3 :jelly 4. When slicing, 4 is part of the array, but there is no index 5. array[4] would return nil as it is accessing the element directly rather than a span.
+  # Slicing does not identify the element, but places it between index numbers to
+  # define a span. 0 :peanut 1 :butter 2 :and 3 :jelly 4. When slicing, 4 is part
+  # of the array, but there is no index 5. array[4] would return nil as it is accessing
+  # the element directly rather than a span.
 
   def test_arrays_and_ranges
     assert_equal Range, (1..5).class
@@ -63,7 +67,8 @@ class AboutArrays < Neo::Koan
     assert_equal [:and, :jelly], array[2..-1]
   end
 
-  # Slicing with ranges works by telling the array to slice from the first index number to the second index number.
+  # Slicing with ranges works by telling the array to slice from the first index number
+  # to the second index number.
 
   def test_pushing_and_popping_arrays
     array = [1,2]
