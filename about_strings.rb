@@ -103,8 +103,10 @@ EOS
     # Ruby programmers tend to favor the shovel operator (<<) over the
     # plus equals operator (+=) when building up strings.  Why?
     
-    # The shovel operator modifies the existing string rather than making
-    # a new one, so fewer objects are needed to be held in memory.
+    # The shovel operator modifies the existing object rather than making
+    # a new one, so fewer objects are needed to be held in memory and
+    # garbage collect doesn't have to be run. Running a benchmark test
+    # shows that the shovel operator is significantly faster.
 
   end
 
