@@ -14,9 +14,10 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  if [a, b, c].uniq.length == 1
+  unique_sides = [a, b, c].uniq.length
+  if unique_sides == 1
     :equilateral
-  elsif [a, b, c].uniq.length == 2
+  elsif unique_sides == 2
     :isosceles
   else
     :scalene
