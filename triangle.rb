@@ -14,14 +14,9 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  unique_sides = [a, b, c].uniq.length
-  if unique_sides == 1
-    :equilateral
-  elsif unique_sides == 2
-    :isosceles
-  else
-    :scalene
-  end
+  x, y, z = [a,b,c].sort
+  raise TriangleError if x <= 0 || x + y <= z
+  [:equilateral, :isosceles, :scalene].fetch([a,b,c].uniq.length - 1)
 end
 
 # Error class used in part 2.  No need to change this code.
