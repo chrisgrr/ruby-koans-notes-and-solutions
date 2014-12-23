@@ -89,6 +89,6 @@ class AboutConstants < Neo::Koan
 
   # class MyAnimals::Oyster is its own, distinct lexical scope, with no
   # parent, so has no access to the LEGS constant in MyAnimals.
-  # MyAnimals::Oyster is not the same as class MyAnimals; class Oyster.
+  # class MyAnimals::Oyster is not the same as class MyAnimals; class Oyster.
   # blog.elpassion.com/Ruby-gotchas/
 end
